@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RHK Blinkit Clone</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Loot Offers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 40px;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #ff9900;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e68a00;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">RHK Store</div>
-    <input type="text" id="search" placeholder="Search groceries..." />
-    <div class="cart-icon" title="Cart">🛒<span id="cart-count">0</span></div>
-  </header>
 
-  <main>
-    <h1>Fresh Groceries Delivered Fast</h1>
-    <div class="products" id="products">
-      <!-- Products will go here -->
-    </div>
-  </main>
+  <div class="box">
+    <h1>Welcome to LootHub</h1>
+    <p>
+      We share the best Amazon and Flipkart deals.<br>
+      Updated daily. Genuine offers only.
+    </p>
+    <button onclick="goToOffers()">Continue</button>
+  </div>
 
-  <script src="script.js"></script>
+  <script>
+    function goToOffers() {
+      window.location.href = "offers.html";
+    }
+  </script>
+
 </body>
 </html>
-<header>
-  <div class="logo">RHK Store</div>
-  <nav class="menu">
-    <a href="#">Home</a>
-    <a href="#">Categories</a>
-    <a href="#">Deals</a>
-    <a href="#">Profile</a>
-  </nav>
-  <input type="text" id="search" placeholder="Search groceries..." />
-  <div class="cart-icon" title="Cart">🛒<span id="cart-count">0</span></div>
-</header>
