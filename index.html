@@ -1,53 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Loot Offers</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      text-align: center;
-      padding: 40px;
-    }
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 400px;
-      margin: auto;
-    }
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
-      background: #ff9900;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #e68a00;
-    }
-  </style>
+    <title>RHK Music Premium</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="box">
-    <h1>Welcome to LootHub</h1>
-    <p>
-      We share the best Amazon and Flipkart deals.<br>
-      Updated daily. Genuine offers only.
-    </p>
-    <button onclick="goToOffers()">Continue</button>
-  </div>
+<div class="app-container">
 
-  <script>
-    function goToOffers() {
-      window.location.href = "offers.html";
-    }
-  </script>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2 class="logo">RHK MUSIC</h2>
+        <button onclick="toggleTheme()">🌙 Toggle Mode</button>
+    </div>
 
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <h1>🔥 Your Playlist</h1>
+        <div class="song-list" id="songList"></div>
+    </div>
+
+</div>
+
+<!-- BOTTOM PLAYER -->
+<div class="bottom-player">
+    <div class="song-info">
+        <h3 id="nowPlaying">Select a Song</h3>
+    </div>
+
+    <div class="controls">
+        <button onclick="toggleShuffle()">🔀</button>
+        <button onclick="prevSong()">⏮</button>
+        <button onclick="togglePlay()" id="playBtn">▶</button>
+        <button onclick="nextSong()">⏭</button>
+        <button onclick="toggleRepeat()">🔁</button>
+    </div>
+</div>
+
+<!-- Loading Spinner -->
+<div class="loader" id="loader">Loading...</div>
+
+<div id="youtubePlayer"></div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
 </body>
 </html>
